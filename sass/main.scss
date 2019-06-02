@@ -27,6 +27,8 @@ body{
 }
 
 .letter-t{
+  @include center;
+  
   .white{
     @include center;
     width: 15vmin;
