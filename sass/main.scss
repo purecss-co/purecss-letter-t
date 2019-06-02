@@ -82,7 +82,7 @@ body{
   .top{
     top: -25vmin;
     border-bottom-right-radius: 1vmin;
-    transform: rotateY(0deg) rotateZ(150deg) skewX(30.8deg);
+    transform: rotateZ(150deg) skewX(30.8deg);
     background: linear-gradient(to bottom,#c8b2ff 30%, #ac6dff);
 
     &:before{
