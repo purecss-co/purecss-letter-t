@@ -43,7 +43,7 @@ body{
 
   .shape{
     @include center;
-    @include square(15.4vmin,27vmin,linear-gradient(to bottom,#c7b4ff 30%,#7d99ff))
+    @include square(15.4vmin,27vmin,linear-gradient(to bottom,#c7b4ff 30%,#7d99ff));
     z-index: 2;
     top: 21vmin;
     left: -13.5vmin;
@@ -52,13 +52,13 @@ body{
 
     &:before{
       @include pseudo;
-      @include square(10vmin,13.4vmin,linear-gradient(to bottom,#c7b2ff 70%,#b5aeff))
+      @include square(10vmin,13.4vmin,linear-gradient(to bottom,#c7b2ff 70%,#b5aeff));
       left: -9.5vmin;
     }
 
     &:after{
       @include pseudo;
-      @include square(15.5vmin,13.4vmin,linear-gradient(to right,#9f6aff, #8864ff 50%, #7160ff 90%))
+      @include square(15.5vmin,13.4vmin,linear-gradient(to right,#9f6aff, #8864ff 50%, #7160ff 90%));
       left: -15.45vmin;
       border-radius: 0.5vmin 8vmin 0 1.2vmin;
     }
