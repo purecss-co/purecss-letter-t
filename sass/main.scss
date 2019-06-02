@@ -16,6 +16,12 @@ $bg-color: #141b33;
     position: $position;
 }
 
+@mixin square($width,$height,$background) {
+  width: $width;
+  height: $height;
+  background: $background;
+}
+
 html, body{
   width: 100%;
   height: 100%;
@@ -28,45 +34,33 @@ body{
 
 .letter-t{
   @include center;
-  
+
   .white{
     @include center;
-    width: 15vmin;
-    height: 15vmin;
-    background: white;
+    @include square(15vmin,15vmin,#ffffff);
     z-index: 1;
   }
 
   .shape{
     @include center;
+    @include square(15.4vmin,27vmin,linear-gradient(to bottom,#c7b4ff 30%,#7d99ff))
     z-index: 2;
     top: 21vmin;
     left: -13.5vmin;
-    width: 15.4vmin;
-    height: 27vmin;
-    background: linear-gradient(to bottom,#c7b4ff 30%,#7d99ff);
     transform: rotate(30deg) skewX(30deg);
-    border-top-right-radius: 7vmin;
-    border-bottom-left-radius: 1vmin;
-    border-bottom-right-radius: 0.5vmin;
+    border-radius: 0 7vmin 0.5vmin 1vmin;
 
     &:before{
       @include pseudo;
+      @include square(10vmin,13.4vmin,linear-gradient(to bottom,#c7b2ff 70%,#b5aeff))
       left: -9.5vmin;
-      width: 10vmin;
-      height: 13.4vmin;
-      background: linear-gradient(to bottom,#c7b2ff 70%,#b5aeff);
     }
 
     &:after{
       @include pseudo;
+      @include square(15.5vmin,13.4vmin,linear-gradient(to right,#9f6aff, #8864ff 50%, #7160ff 90%))
       left: -15.45vmin;
-      width: 15.5vmin;
-      height: 13.4vmin;
-      background: linear-gradient(to right,#9f6aff, #8864ff 50%, #7160ff 90%);
-      border-top-left-radius: 0.5vmin;
-      border-top-right-radius: 8vmin;
-      border-bottom-left-radius: 1.2vmin;
+      border-radius: 0.5vmin 8vmin 0 1.2vmin;
     }
   }
 
